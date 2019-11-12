@@ -1,0 +1,196 @@
+extends layout
+
+block content
+  .container
+    .col-md-12.mx-auto.pt-2
+      form
+        .form-row
+          .form-group.col-md-2
+            label(for='inputEmail4') Location
+            input#inputEmail4.form-control(type='text', placeholder='Author last name')
+            p.mt-2 e.g. Smith
+          .form-group.col-md-2
+            label(for='inputPassword4') From
+            input#datepicker1.form-control(type='text', placeholder='Today')
+            p.mt-2 e.g. J.L.
+          .form-group.col-md-2
+            label(for='inputPassword4') To
+            input#datepicker2.form-control(type='text', placeholder='All dates')
+            p.mt-2 e.g. J.L.
+          .form-group.col-md-2
+            label(for='inputPassword4') Keyword
+            input#inputPassword4.form-control(type='text', placeholder='Author first name')
+            p.mt-2 e.g. J.L.
+          .form-group.col-md-1.d-flex.align-items-center(style='padding-bottom: 17px;')
+            button.btn.btn-outline-dark.my-2.my-sm-0(type='submit') Search
+        .form-row
+          .form-group.col-md-2
+            .dropdown
+              a#dropdownMenuLink.btn.btn-dark.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                | Dropdown link
+              .dropdown-menu(aria-labelledby='dropdownMenuLink')
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+            p.mt-2 e.g. University of Toronto
+          .form-group.col-md-2
+            .dropdown
+              a#dropdownMenuLink.btn.btn-dark.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                | Dropdown link
+              .dropdown-menu(aria-labelledby='dropdownMenuLink')
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
+            p.mt-2 e.g. University of Toronto
+          .form-group.col-md-2.d-flex.align-items-center.pl-5
+            input#gridCheck.form-check-input(type='checkbox')
+            input#exampleCheck1.form-check-input(type='checkbox')
+            label.form-check-label(for='exampleCheck1') Show exact matches only
+          .form-group.col-md-2.d-flex.align-items-center.pl-5
+            input#gridCheck.form-check-input(type='checkbox')
+            input#exampleCheck1.form-check-input(type='checkbox')
+            label.form-check-label(for='exampleCheck1') Show exact matches only
+          .form-group.col-md-2.d-flex.align-items-center.pl-5
+            input#gridCheck.form-check-input(type='checkbox')
+            input#exampleCheck1.form-check-input(type='checkbox')
+            label.form-check-label(for='exampleCheck1') Show exact matches only
+            
+      style.
+        .ui-datepicker-trigger {
+          width: 40px;
+          height: 38px;
+          padding: 0px;
+          margin-left: 10px;
+        }
+      script.
+        $( function() {
+            $("#datepicker1, #datepicker2")
+          .wrap('<div class="input-group">')
+          .datepicker({
+            dateFormat: "yy-mm-dd",
+            changeYear: true,
+            showOn: "button",
+            buttonImage: "images/data-img.gif",
+            buttonImageOnly: true
+          })
+            .next("button").button({
+            text: false
+          })
+          .addClass("btn btn-default")
+          .wrap('<span class="input-group-btn">')
+          .find('.ui-button-text')
+          .css({
+            'visibility': 'hidden',
+            'display': 'inline'
+          });
+          } );
+
+    .container.mt-2
+      .row
+        .col-lg-8.mr-0.pr-0.mb-5
+          h4.text-center Актуальні події
+          .card.border-0.shadow.animate-this
+            img.card-img-top(src='images/Media_18.jpg', alt='Card image cap')
+            .card-body
+              h5.card-title Card title
+              p.card-text
+                | Some quick example text to build on the card title and make up the bulk of the card's content.
+              a.btn.btn-dark.mt-2(href='#') Детальніше
+          .row.mt-2
+            .col-md-6.col-sm-6.mt-2
+              .card.border-0.shadow.animate-this
+                img.card-img-top(src='images/Media_25.jpg', alt='Card image cap')
+                .card-body(style='height: 163px;')
+                  h5.card-title Card title
+                  p.card-text
+                    | Some quick example text to build on the card title and make up the bulk of the card's content. 
+                    a.btn.btn-dark.btn-sm.mt-2(href='#') Детальніше
+            .col-md-6.col-sm-6.mt-2
+              .card.border-0.shadow.animate-this
+                img.card-img-top(src='images/Media_25.jpg', alt='Card image cap')
+                .card-body(style='height: 163px;')
+                  h5.card-title Card title
+                  p.card-text
+                    | Some quick example text to build on the card title and make up the bulk of the card's content. 
+                    a.btn.btn-dark.btn-sm.mt-2(href='#') Детальніше
+            .col-md-6.col-sm-6.mt-3
+              .card.border-0.shadow.animate-this
+                img.card-img-top(src='images/Media_25.jpg', alt='Card image cap')
+                .card-body(style='height: 163px;')
+                  h5.card-title Card title
+                  p.card-text
+                    | Some quick example text to build on the card title and make up the bulk of the card's content. 
+                    a.btn.btn-dark.btn-sm.mt-2(href='#') Детальніше
+            .col-md-6.col-sm-6.mt-3
+              .card.border-0.shadow.animate-this
+                img.card-img-top(src='images/Media_25.jpg', alt='Card image cap')
+                .card-body(style='height: 163px;')
+                  h5.card-title Card title
+                  p.card-text
+                    | Some quick example text to build on the card title and make up the bulk of the card's content. 
+                    a.btn.btn-dark.btn-sm.mt-2(href='#') Детальніше
+            button.btn.btn-dark.btn-sm.btn-block.mt-3.mx-auto(type='button', style='width: 20rem;') Більше актуальних події
+
+        .col-lg-4
+          h4.text-center Майбутні події
+          ul.list-unstyled
+            div.mb-3
+              li.media.mb-3.brline
+                img.mr-3(src='images/media_5.jpg', alt='Generic placeholder image')
+                .media-body.mt-0.mb-0
+                  p.pr.mb-0
+                    strong 5 грудня 
+                    span.brl 15:00 - 18:00
+                  p ПДАТУ каб 107. Тема: Психологія. Лектор: Ф.А.
+                    button.btn.btn-dark.btn-sm.mt-1(type='button') Детальніше
+              li.media.mb-3.brline
+                img.mr-3(src='images/media_5.jpg', alt='Generic placeholder image')
+                .media-body.mt-0.mb-0
+                  p.pr.mb-0
+                    strong 5 грудня в 18:00
+                  p ПДАТУ каб 107. Тема: Психологія. Лектор: Ф.А.
+                    button.btn.btn-dark.btn-sm.mt-1(type='button') Детальніше
+              li.media.indents-1.brline
+                img.mr-3(src='images/media_5.jpg', alt='Generic placeholder image')
+                .media-body.mt-0.mb-0
+                  p.pr.mb-0
+                    strong 5 грудня в 18:00
+                  p ПДАТУ каб 107. Тема: Психологія. Лектор: Ф.А.
+                    button.btn.btn-dark.btn-sm.mt-1(type='button') Детальніше
+            .indents
+              li.media.mb-3.brline
+                img.mr-3(src='images/media_5.jpg', alt='Generic placeholder image')
+                .media-body.mt-0.mb-0
+                  p.pr.mb-0
+                    strong 5 грудня в 18:00
+                  p ПДАТУ каб 107. Тема: Психологія. Лектор: Ф.А.
+                    button.btn.btn-dark.btn-sm.mt-1(type='button') Детальніше
+              li.media.mb-3.brline
+                img.mr-3(src='images/media_5.jpg', alt='Generic placeholder image')
+                .media-body.mt-0.mb-0
+                  p.pr.mb-0
+                    strong 5 грудня в 18:00
+                  p ПДАТУ каб 107. Тема: Психологія. Лектор: Ф.А.
+                    button.btn.btn-dark.btn-sm.mt-1(type='button') Детальніше
+              li.media.mb-3.brline
+                img.mr-3(src='images/media_5.jpg', alt='Generic placeholder image')
+                .media-body.mt-0.mb-0
+                  p.pr.mb-0
+                    strong 5 грудня в 18:00
+                  p ПДАТУ каб 107. Тема: Психологія. Лектор: Ф.А.
+                    button.btn.btn-dark.btn-sm.mt-1(type='button') Детальніше
+
+
+
+          nav(aria-label='Page navigation example')
+            ul.pagination.justify-content-center.mt-3.mb-3
+              li.page-item
+                a.page-link(href='#') Previous
+              li.page-item
+                a.page-link(href='#') 1
+              li.page-item
+                a.page-link(href='#') 2
+              li.page-item
+                a.page-link(href='#') 3
+              li.page-item
+                a.page-link(href='#') Next

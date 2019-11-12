@@ -1,0 +1,145 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='css/custom_styles.css')
+    link(rel='stylesheet', href='bower_components/components-font-awesome/css/fontawesome-all.css')
+    link(rel='stylesheet', href='bower_components/jquery-ui-1.12.1.custom/jquery-ui.css')
+    script(src='bower_components/jquery-ui-1.12.1.custom/external/jquery/jquery.js')
+    script(src='bower_components/jquery-ui-1.12.1.custom/jquery-ui.js')
+    link(rel='stylesheet', href='css/carousel.css')
+ 
+  body.bg-light
+  
+#navigation.wrapper
+  .navbar-inner.bg-light
+    .inner
+      .mx-auto(style='width: 200px;')
+        a(href='#')
+          img(style='margin-top:20px; margin-bottom:20px;' alt='AAAS', title='American Association for the Advancement of Science', src='images/logo_1.png')
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        .container
+          button.navbar-toggler.mx-auto(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarSupportedContent.collapse.navbar-collapse
+            ul#main-menu.navbar-nav.mr-auto
+              li.nav-item
+                a.nav-link(href='/') Головна
+              li.nav-item
+                a.nav-link(href='/news') Події
+              li.nav-item
+                a.nav-link(href='/articles') Публікації
+              li.nav-item
+                a.nav-link(href='/authors') Автори
+              li.nav-item
+                a.nav-link(href='/journals') Журнали
+              li.nav-item
+                a.nav-link(href='/about') Про нас
+              ul#login-menu.nava.pull-right.mx-auto(style='\
+              margin-top: 0px;\
+              ')
+                li.dropdown
+                  a.ln(href='#', data-toggle='dropdown') Увійти
+                  ul.dropdown-menu(role='menu', aria-labelledby='resources-drop')
+                    li(role='menuitem')
+                      a(href='https://thescipub.com/es/register.php', tabindex='-1') Реєстрація
+                    li(role='menuitem')
+                      a(href='https://thescipub.com/es/login.php', tabindex='-1') Вхід
+            form.form-inline.form-navbar.my-2.my-lg-0.order-2(action='#')
+              input.form-control.shadow-none(name='search', type='text', placeholder='Search')
+
+
+
+  block content
+// Footer
+.container-footer.mt40.cleared.container-footer-full(itemscope='', itemtype='http://schema.org/Periodical')
+  meta(itemprop='publisher', content='Springer Nature')
+  #footer.grid.grid-12.pl30.pr30.last
+    h2.hide(aria-level='2') nature.com sitemap
+  .pl30.pr30.content(data-track-component='footer')
+    .grid.grid-12.last.clear-float.cleared.mb5.pt20.text-gray-light.flex-wrap
+      .grid.grid-3.mq875-grid-12.just-mq640-last.just-mq875-last.mb20
+        img(alt='Nature', src='images/logo_1.png')
+      ul.grid.grid-7.mq875-grid-8.mq640-grid-12.just-mq640-last.clean-list.mb10.mt10.text15
+        li.grid.grid-3.mq875-grid-3.mq640-grid-6.mq480-grid-12
+          a.text-gray-light(href='https://www.nature.com/npg_/company_info/index.html', data-track='click', data-track-action='about us', data-track-label='link') Про проект
+        li.grid.grid-3.mq875-grid-3.mq640-grid-6.mq480-grid-12.just-mq640-last.just-mq480-last
+          a.text-gray-light(href='https://www.nature.com/npg_/press_room/press_releases.html', data-track='click', data-track-action='press releases', data-track-label='link') Контактна інформація
+        li.grid.grid-3.mq875-grid-3.mq640-grid-6.mq480-grid-12
+          a.text-gray-light(href='https://press.nature.com/', data-track='click', data-track-action='press office', data-track-label='link') Партнери
+        li.grid.grid-3.mq875-grid-3.mq640-grid-6.mq480-grid-12.last
+          a.text-gray-light(href='https://support.nature.com/support/home', data-track='click', data-track-action='contact us', data-track-label='link') Політика конфіденційності
+      ul.grid.grid-2.mq875-grid-4.mq640-grid-12.last.clean-list.mb10.mt4
+        li.grid.grid-4.mq875-grid-3
+          a.text-gray-light(href='https://www.facebook.com/nature/', data-track='click', data-track-action='facebook', data-track-label='link')
+            img.cleared.text-footer-img(src='images/facebook.png', alt='Facebook')
+        li.grid.grid-4.mq875-grid-3
+          a.text-gray-light(href='https://twitter.com/nresearchnews?lang=en', data-track='click', data-track-action='twitter', data-track-label='link')
+            img.cleared.text-footer-img(src='images/instagram.png', alt='Twitter')
+        li.grid.grid-4.mq875-grid-3.last
+          a.text-gray-light(href='https://www.youtube.com/channel/UCvCLdSgYdSTpWcOgEJgi-ng', data-track='click', data-track-action='youtube', data-track-label='link')
+            img.cleared.text-footer-img(src='images/youtube.png', alt='Youtube')
+    .cleared.z-index-1.pt30.pb20.border-top-1.border-gray.text-footer-mobile-bottom.hide-print
+      .grid.grid-3.mq875-grid-4.mq640-grid-6.mq480-grid-12
+        h3.text-footer-heading Discover content
+        ul.clean-list.ma0.mb6.text15
+          li.pb4
+            a.text-gray-light(href='https://www.nature.com/siteindex/', data-track='click', data-track-action='journals a-z', data-track-label='link') Journals A-Z
+          li.pb4
+            a.text-gray-light(href='https://www.nature.com/subjects/', data-track='click', data-track-action='article by subject', data-track-label='link') Articles by subject
+          li.pb4
+            a.text-gray-light(href='https://nano.nature.com/', data-track='click', data-track-action='nano', data-track-label='link') Nano
+          li.pb4
+            a.text-gray-light(href='https://www.nature.com/protocolexchange/', data-track='click', data-track-action='protocol exchange', data-track-label='link') Protocol Exchange
+          li.pb4
+            a.text-gray-light(href='https://www.natureindex.com/', data-track='click', data-track-action='nature index', data-track-label='link') Nature Index
+      .grid.grid-3.mq875-grid-4.mq640-grid-6.mq480-grid-12.just-mq640-last
+        h3.text-footer-heading Publish with us
+        ul.clean-list.ma0.mb6.text15
+          li.pb4
+            a.text-gray-light(href='https://www.nature.com/authors/author_resources/index.html', data-track='click', data-track-action='guide to authors', data-track-label='link') Guide to Authors
+          li.pb4
+            a.text-gray-light(href='https://www.nature.com/authors/peer_review/', data-track='click', data-track-action='guide to referees', data-track-label='link') Guide to Referees
+          li.pb4
+            a.text-gray-light(href='https://www.nature.com/authors/editorial_policies/', data-track='click', data-track-action='editorial policies', data-track-label='link') Editorial policies
+          li.pb4
+            a.text-gray-light(href='http://www.nature.com/openresearch/publishing-with-npg/', data-track='click', data-track-action='open access', data-track-label='link') Open access
+          li.pb4
+            a.text-gray-light(href='https://www.nature.com/reprints/', data-track='click', data-track-action='reprints and permissions', data-track-label='link') Reprints & permissions
+      .grid.grid-3.mq875-grid-4.mq640-grid-6.mq480-grid-12.just-mq875-last
+        h3.text-footer-heading Researcher services
+        ul.clean-list.ma0.mb6.text15
+          li.pb4
+            a.text-gray-light(href='https://www.springernature.com/gp/authors/research-data', data-track='click', data-track-action='data research service', data-track-label='link') Research data
+          li.pb4
+            a.text-gray-light(href='https://authorservices.springernature.com/language-editing/?utm_source=natureAuthors&utm_medium=referral&utm_campaign=natureAuthors', data-track='click', data-track-action='language editing', data-track-label='link') Language editing
+          li.pb4
+            a.text-gray-light(href='https://authorservices.springernature.com/scientific-editing/?utm_source=natureAuthors&utm_medium=referral&utm_campaign=natureAuthors', data-track='click', data-track-action='scientific editing', data-track-label='link') Scientific editing
+          li.pb4
+            a.text-gray-light(href='https://masterclasses.nature.com/', data-track='click', data-track-action='nature masterclasses', data-track-label='link') Nature Masterclasses
+          li.pb4
+            a.text-gray-light(href='https://partnerships.nature.com/product/nature-research-academies/', data-track='click', data-track-action='nature research academies', data-track-label='link') Nature Research Academies
+      .grid.grid-3.mq875-grid-4.mq640-grid-6.mq480-grid-12.just-mq875-clear.just-mq640-last.full-size-last.just-mq1200-last.just-mq875-last.just-mq480-last
+        h3.text-footer-heading Libraries & institutions
+        ul.clean-list.ma0.mb6.text15
+          li.pb4
+            a.text-gray-light(href='https://www.springernature.com/gp/librarians/tools-services', data-track='click', data-track-action='librarian service and tools', data-track-label='link') Librarian service & tools
+          li.pb4
+            a.text-gray-light(href='https://www.springernature.com/gp/librarians/manage-your-account/librarianportal', data-track='click', data-track-action='librarian portal', data-track-label='link') Librarian portal
+          li.pb4
+            a.text-gray-light(href='http://www.nature.com/openresearch/about-open-access/information-for-institutions/', data-track='click', data-track-action='open research', data-track-label='link') Open research
+    .cleared.z-index-1.pt30.pb20.border-top-1.border-gray.text-footer-mobile-top.hide-print
+  .container-footer-box.cleared.hide-print.text14
+  
+style.
+    .navbar .navbar-collapse {
+      text-align: center;
+    }
+
+
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js', integrity='sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut', crossorigin='anonymous')
+script(src='js/pagination.js')
+script(src='bower_components/bootstrap/dist/js/bootstrap.js')
+script(src='bower_components/bootstrap/dist/js/bootstrap.bundle.js')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js', integrity='sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k', crossorigin='anonymous')
